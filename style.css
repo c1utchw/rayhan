@@ -66,7 +66,7 @@ a:hover {
   max-width: 800px;
   padding: 2rem;
   backdrop-filter: blur(12px) saturate(180%);
-  background: rgba(13,10,14,0.33);
+  background: rgba(13,10,14,0.165);
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.1);
 }
@@ -368,4 +368,22 @@ section h2 {
 @media (max-width: 768px) {
   .hero h1 {font-size: 2.2rem;}
   .hero .subtitle {font-size: 1.2rem;}
+  .adv-images {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    gap: 0.5rem;
+  }
+  .adv-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+} 
+
+/* About section – center all text */
+.about {
+  text-align: center;
+  padding: 1rem;
 }
