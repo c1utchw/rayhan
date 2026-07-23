@@ -23,6 +23,15 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="alternate icon" href="favicon.svg" type="image/svg+xml" />
   
+  <!-- Preload critical resources -->
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="fonts/GreengothSHA.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="images/hero.jpg" as="image" />
+  
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://c1utchw.github.io/rayhan/" />
@@ -56,6 +65,11 @@
       @media (max-width: 480px) {
         .whatsapp-float { width: 70px; height: 70px; }
       }
+    </style>
+    <!-- Inline critical CSS for font display -->
+    <style>
+      @font-face{font-family:'GreengothSHA';src:url('fonts/GreengothSHA.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:swap}
+      body{font-family:'GreengothSHA',Arial,sans-serif}
     </style>
   <!-- Google Ads Conversion Tracking -->
   <script>
@@ -251,19 +265,20 @@
   </script>
   
   <link rel="stylesheet" href="style.css" />
-  <!-- Font faces (place your .woff/.woff2 files in fonts/) -->
+  <!-- Defer non-critical fonts -->
+  <link rel="preload" href="fonts/Parchment.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/Rotasuningr.woff2" as="font" type="font/woff2" crossorigin />
+  <!-- Font faces for secondary fonts -->
   <style>
-    @font-face {font-family: 'GreengothSHA'; src: url('fonts/GreengothSHA.woff2') format('woff2'); font-weight: normal; font-style: normal;}
-    @font-face {font-family: 'Parchment'; src: url('fonts/Parchment.woff2') format('woff2'); font-weight: normal; font-style: normal;}
-    @font-face {font-family: 'Rotasuningr'; src: url('fonts/Rotasuningr.woff2') format('woff2'); font-weight: normal; font-style: normal;}
-    @font-face {font-family: 'Kereru'; src: url('fonts/Kereru.woff2') format('woff2'); font-weight: normal; font-style: normal;}
-    body {font-family: 'GreengothSHA', Arial, sans-serif;}
+    @font-face {font-family: 'Parchment'; src: url('fonts/Parchment.woff2') format('woff2'); font-weight: normal; font-style: normal; font-display: swap;}
+    @font-face {font-family: 'Rotasuningr'; src: url('fonts/Rotasuningr.woff2') format('woff2'); font-weight: normal; font-style: normal; font-display: swap;}
+    @font-face {font-family: 'Kereru'; src: url('fonts/Kereru.woff2') format('woff2'); font-weight: normal; font-style: normal; font-display: swap;}
   </style>
 </head>
 <body>
   <!-- HERO SECTION -->
   <header class="hero" id="hero">
-    <img src="images/hero.jpg" alt="Райхан — специалист по Таро и духовным практикам с 20-летним опытом" class="hero-bg" />
+    <img src="images/hero.jpg" alt="Райхан — специалист по Таро и духовным практикам с 20-летним опытом" class="hero-bg" fetchpriority="high" />
     <div class="hero-content fade-in">
       <h1>Райхан</h1>
       <p class="subtitle">Специалист с более чем 20‑летним опытом</p>
@@ -353,8 +368,8 @@
         <li>Гибкий график и возможность онлайн‑встреч</li>
       </ul>
     <div class="adv-images">
-      <img src="images/taro.png" alt="Сертификат по гаданию на картах Таро — Райхан" class="adv-img" />
-      <img src="images/vosk.png" alt="Сертификат по восковым практикам — Райхан" class="adv-img" />
+      <img src="images/taro.png" alt="Сертификат по гаданию на картах Таро — Райхан" class="adv-img" loading="lazy" />
+      <img src="images/vosk.png" alt="Сертификат по восковым практикам — Райхан" class="adv-img" loading="lazy" />
     </div>
   </section>
 
@@ -394,6 +409,6 @@
   </footer>
 
   <a href="https://wa.me/996990990333?text=Привет%20Райхан%2C%20хотел(а)%20бы%20получить%20консультацию" onclick="return gtag_report_conversion(this.href);" class="whatsapp-float" aria-label="WhatsApp"></a>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

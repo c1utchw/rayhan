@@ -1,12 +1,10 @@
 /* Global Styles */
 :root {
-  /* Color palette */
-  --color-bg: #0d0a0e;               /* deep dark */
-  --color-primary: #d4af37;          /* warm gold */
-  --color-accent: #c4a484;           /* soft warm */
-  --color-text: #f5f5f5;            /* light text */
+  --color-bg: #0d0a0e;
+  --color-primary: #d4af37;
+  --color-accent: #c4a484;
+  --color-text: #f5f5f5;
   --color-muted: #a7a7a7;
-  /* Font families (fallback) */
   --font-primary: 'GreengothSHA', Arial, sans-serif;
   --font-secondary: 'Parchment', serif;
   --font-accent: 'Rotasuningr', cursive;
@@ -35,7 +33,6 @@ a:hover {
   color: var(--color-accent);
 }
 
-/* Layout helpers */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -99,7 +96,6 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* WhatsApp button style for service cards */
 .whatsapp-card {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -110,7 +106,6 @@ a:hover {
   font-weight: bold;
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .whatsapp-card:hover {
   background: var(--color-accent);
   transform: translateY(-2px);
@@ -126,6 +121,11 @@ section h2 {
   text-align: center;
   margin-bottom: 2rem;
   color: var(--color-primary);
+}
+
+.about {
+  text-align: center;
+  padding: 1rem;
 }
 
 /* SERVICES */
@@ -175,6 +175,18 @@ section h2 {
   border-radius: 8px;
   font-size: 1.1rem;
 }
+.adv-images {
+  display: flex;
+  justify-content: center;
+  width: 33.33%;
+  margin: 0 auto;
+  gap: 1rem;
+}
+.adv-img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
 
 /* FAQ */
 .faq dl {
@@ -198,12 +210,9 @@ section h2 {
   padding: 3rem 1rem;
   margin-bottom: 2rem;
 }
-
 .cta p {
   transform: translateY(-15%);
   line-height: 1.1;
-}
-  transform: translateY(-15%);
 }
 .cta .btn {
   font-size: 1.2rem;
@@ -213,66 +222,12 @@ section h2 {
   background: var(--color-primary);
   color: var(--color-bg);
 }
+.cta .btn:hover {
+  background: var(--color-accent);
+}
 
 /* Floating WhatsApp button */
 .whatsapp-float {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 60px;
-  height: 60px;
-  background: transparent url('images/whatsapp.png') center / contain no-repeat;
-  /* square button, no rounded corners */
-  border-radius: 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: pulse 2s infinite;
-  z-index: 1000;
-}
-.whatsapp-float:hover {
-  background: transparent url('images/whatsapp.png') center / contain no-repeat;
-}
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 51px; /* 15% smaller */
-  height: 51px; /* 15% smaller */
-  background: transparent url('images/whatsapp.png') center/cover no-repeat;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: pulse 2s infinite;
-  z-index: 1000;
-}
-.whatsapp-float:hover {
-  background: transparent url('images/whatsapp.png') center/cover no-repeat;
-}
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 60px;
-  height: 60px;
-  background: transparent url('images/whatsapp.png') center/cover no-repeat;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: pulse 2s infinite;
-  z-index: 1000;
-}
-.whatsapp-float:hover {
-  background: transparent url('images/whatsapp.png') center/cover no-repeat;
-}
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 60px;
-  height: 60px;
-  background: var(--color-primary) url('images/whatsapp.png') center/cover no-repeat;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: pulse 2s infinite;
-  z-index: 1000;
-}
-.whatsapp-float:hover {
-  background: var(--color-accent) url('images/whatsapp.png') center/cover no-repeat;
-}
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
@@ -299,17 +254,6 @@ section h2 {
   100% { transform: scale(1); opacity: 1; }
 }
 
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  margin: 0.5rem;
-  border-radius: 8px;
-  background: var(--color-primary);
-  color: var(--color-bg);
-}
-.cta .btn:hover {
-  background: var(--color-accent);
-}
-
 /* FOOTER */
 .footer {
   background: rgba(0,0,0,0.4);
@@ -324,30 +268,6 @@ section h2 {
 }
 
 /* Animations */
-.adv-img {
-  width: 100%;
-  height: auto;
-  margin: 0;
-}
-/* Certificates container */
-.adv-images {
-  display: flex;
-  justify-content: center;
-  width: 33.33%;
-  margin: 0 auto;
-  gap: 1rem;
-}
-
-  width: 30%;
-  max-width: none;
-  height: auto;
-  margin: 0;
-}
-  width: 120px;
-  height: auto;
-  max-height: none;
-  margin: 0 auto;
-}
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.8s forwards;
@@ -364,7 +284,7 @@ section h2 {
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive tweaks */
+/* Responsive */
 @media (max-width: 768px) {
   .hero h1 {font-size: 2.2rem;}
   .hero .subtitle {font-size: 1.2rem;}
@@ -380,10 +300,4 @@ section h2 {
     height: auto;
     margin: 0;
   }
-} 
-
-/* About section – center all text */
-.about {
-  text-align: center;
-  padding: 1rem;
 }
