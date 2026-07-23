@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://c1utchw.github.io/rayhan/sitemap.xml
