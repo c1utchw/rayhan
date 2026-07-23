@@ -20,7 +20,6 @@
   
   <!-- Preload critical resources -->
   <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="fonts/GreengothSHA.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="images/hero.jpg" as="image" fetchpriority="high">
   
   <!-- Open Graph / Facebook -->
@@ -259,8 +258,7 @@
   <!-- Critical CSS Inline -->
   <style>
     /* Critical above-the-fold styles */
-    @font-face{font-family:'GreengothSHA';src:url('fonts/GreengothSHA.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:swap}
-    body{margin:0;font-family:'GreengothSHA',Arial,sans-serif;background:#0d0a0e;color:#f5f5f5;line-height:1.6}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Helvetica Neue',Arial,sans-serif;background:#0d0a0e;color:#f5f5f5;line-height:1.6}
     .hero{position:relative;height:100vh;min-height:500px;display:flex;align-items:center;justify-content:center}
     .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.6)}
     .hero-content{max-width:800px;padding:2rem;backdrop-filter:blur(12px) saturate(180%);background:rgba(13,10,14,0.165);border-radius:12px}
@@ -274,17 +272,6 @@
   </style>
   
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Preload secondary fonts -->
-  <link rel="preload" href="fonts/Parchment.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Rotasuningr.woff2" as="font" type="font/woff2" crossorigin>
-  
-  <!-- Secondary font faces -->
-  <style>
-    @font-face {font-family: 'Parchment'; src: url('fonts/Parchment.woff2') format('woff2'); font-weight: normal; font-style: normal; font-display: swap;}
-    @font-face {font-family: 'Rotasuningr'; src: url('fonts/Rotasuningr.woff2') format('woff2'); font-weight: normal; font-style: normal; font-display: swap;}
-    @font-face {font-family: 'Kereru'; src: url('fonts/Kereru.woff2') format('woff2'); font-weight: normal; font-style: normal; font-display: swap;}
-  </style>
 </head>
 <body>
   <!-- Skip to main content for accessibility -->
@@ -385,8 +372,8 @@
         <li>Гибкий график и возможность онлайн‑встреч</li>
       </ul>
     <div class="adv-images">
-      <img src="images/taro.png" alt="Сертификат по гаданию на картах Таро — Райхан" class="adv-img" loading="lazy" />
-      <img src="images/vosk.png" alt="Сертификат по восковым практикам — Райхан" class="adv-img" loading="lazy" />
+      <img src="images/taro.png" alt="Сертификат по гаданию на картах Таро — Райхан" class="adv-img" loading="lazy" width="600" height="900" />
+      <img src="images/vosk.png" alt="Сертификат по восковым практикам — Райхан" class="adv-img" loading="lazy" width="600" height="900" />
     </div>
   </section>
 
